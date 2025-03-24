@@ -1,4 +1,4 @@
-const apiKey = '2441fb6619mshd2329fd64b8505cp163283jsnbfa60d52c50'; // API key RapidAPI
+const apiKey = ''; // API key RapidAPI
 const apiHost = 'jobs-api14.p.rapidapi.com'; // the correct host
 const apiUrl = `https://jobs-api14.p.rapidapi.com/search`; // The API endpoint
 
@@ -19,7 +19,7 @@ function fetchJobs(jobTitle, location) {
     fetch(`${apiUrl}?query=${jobTitle}&location=${location}`, {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': "2441fb6619mshd2329fd64b8505cp163283jsnbfa60d52c50f",
+            'X-RapidAPI-Key': "",
             'X-RapidAPI-Host': jobs-api14.p.rapidapi.com,
         }
     })
