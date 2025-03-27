@@ -3,30 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Search</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Job Finder Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Job Search</h1>
+        <div class="header-content">
+            <h1>Job Finder Dashboard</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="inde.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="jobs.html">Jobs</a>
+        </nav>
     </header>
-
+    
     <main>
-        <section class="search-section">
-            <input type="text" id="job-title" placeholder="Enter job title (e.g., Software Engineer)" />
-            <input type="text" id="location" placeholder="Enter location (e.g., Remote)" />
-            <button id="search-button">Search Jobs</button>
+        <section class="overview">
+            <div class="card">
+                <h3>Total Job Listings</h3>
+                <p id="total-jobs">"https://google-jobs-api.p.rapidapi.com/google-jobs/job-type?jobType=Full-time&include=Accounting&location=Berlin"</p>
+            </div>
+            <div class="card">
+                <h3>Most Popular Industry</h3>
+                <p id="popular-industry">"https://google-jobs-api.p.rapidapi.com/google-jobs/job-type?jobType=Full-time&include=Accounting&location=Berlin"</p>
+            </div>
+            <div class="card">
+                <h3>New Listings Today</h3>
+                <p id="new-listings">10</p>
+            </div>
         </section>
-
-        <section id="job-list-container" class="job-list-container">
-            <!-- Job listings will appear here -->
+        
+        <section class="dashboard-charts">
+            <div class="chart-container">
+                <h3>Job Listings Per Industry</h3>
+                <canvas id="industryBarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Job Distribution by Type</h3>
+                <canvas id="jobPieChart"></canvas>
+            </div>
+        </section>
+        
+        <section class="recent-jobs">
+            <div class="section-header">
+                <h2>Recent Job Postings</h2>
+                <a href="jobs.html" class="view-all-link">View All</a>
+            </div>
+            <table id="recent-jobs-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Posted Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows populated by JavaScript -->
+                </tbody>
+            </table>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2025 Job Search App</p>
+        <p>Job Finder Platform | &copy; 2025</p>
     </footer>
-
+    
+    <script src="api.js"></script>
+    <script src="charts.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
