@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Opportunities - Visualizations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://google-jobs-api.p.rapidapi.com/google-jobs/job-type?jobType=Full-time&include=Accounting&location=Berlin"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Job Opportunities Analytics</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="inde.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="jobs.html">Job Listings</a>
+            <a href="applications.html" class="active">Applications</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="vis-filter-controls">
+            <div class="date-range">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date">
+            </div>
+            <button id="apply-date-range">Apply</button>
+        </div>
+        
+        <div class="visualization-grid">
+            <section class="vis-card">
+                <h2>Job Postings by Category</h2>
+                <div class="chart-container large">
+                    <canvas id="jobsByCategoryChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="vis-card">
+                <h2>Application Trends Over Time</h2>
+                <div class="chart-container large">
+                    <canvas id="applicationTrendsChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="vis-card full-width">
+                <h2>Monthly Job Openings</h2>
+                <div class="chart-container extra-large">
+                    <canvas id="monthlyJobsChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="vis-card">
+                <h2>Salary Distribution</h2>
+                <div class="chart-container large">
+                    <canvas id="salaryDistributionChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="vis-card">
+                <h2>Top Hiring Companies</h2>
+                <div class="chart-container large">
+                    <canvas id="topCompaniesChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Job Opportunities Platform | &copy; 2025</p>
+    </footer>
+    
+    <script src="api.js"></script>
+    <script src="charts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
