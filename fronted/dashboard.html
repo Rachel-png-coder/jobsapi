@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Opportunities Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Job Opportunities Dashboard</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="inde.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Overview Section -->
+        <section class="overview">
+            <div class="card">
+                <h3>Total Jobs</h3>
+                <p id="total-jobs">0</p>
+            </div>
+            <div class="card">
+                <h3>Top Industry</h3>
+                <p id="top-industry">N/A</p>
+            </div>
+            <div class="card">
+                <h3>Highest Paying Job</h3>
+                <p id="highest-paying-job">N/A</p>
+            </div>
+        </section>
+        
+        <!-- Summary Charts -->
+        <section class="dashboard-charts">
+            <div class="chart-container">
+                <h3>Job Distribution by Industry</h3>
+                <canvas id="industryPieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Weekly Job Trends</h3>
+                <canvas id="jobTrendsChart"></canvas>
+            </div>
+        </section>
+        
+        <!-- Recent Job Postings -->
+        <section class="recent-jobs">
+            <div class="section-header">
+                <h2>Recent Job Postings</h2>
+                <a href="jobs.html" class="view-all-link">View All</a>
+            </div>
+            <table id="recent-jobs-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Salary</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Job Portal | &copy; 2025</p>
+    </footer>
+    
+    <script src="api.js"></script>
+    <script src="charts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
