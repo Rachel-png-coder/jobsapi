@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Job Listings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+            </div>
+            <h1>Job Listings</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="inde.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="applications.html">Applications</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search by Job Title, Company, or Location">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Education">Education</option>
+            </select>
+            <select id="status-filter">
+                <option value="">All Statuses</option>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <input type="date" id="date-filter">
+            <button onclick="applyFilters()">Apply Filters</button>
+        </div>
+        
+        <section class="job-listings">
+            <h2>Available Jobs</h2>
+            <table id="jobs-table">
+                <thead>
+                    <tr>
+
+                        <th>|JobID|</th>
+                        <th>|Title|</th>
+                        <th>|Company|</th>
+                        <th>|Location|</th>
+                        <th>|Category|</th>
+                        <th>|Status|</th>
+                        <th>|PostedDate|</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+            
+            <div class="pagination" id="pagination-controls">
+                <!-- Pagination will be added by JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Job Portal | &copy; 2025</p>
+    </footer>
+    
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
